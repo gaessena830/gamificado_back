@@ -42,7 +42,7 @@ PUT /gamificado_back/updateUser.php
     "identificacion":"1030299838",
     "correo":"aursua@correo.com",
     "telefono":"3003333000",
-    "username":"doc_aursua",
+    "username":"doc_aursua"
 }
 
 # delete user
