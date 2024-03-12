@@ -1,11 +1,13 @@
 <?php
 // Incluir el archivo de configuración de la base de datos
 require_once 'conexion.php';
-
+//llegada de datos 
+$data = json_decode(file_get_contents("php://input"));
+$username = mysqli_real_escape_string($conn,trim($data->username));
 $username=$_GET['username'] ?? '';
 //$password=$_GET['password'] ?? '';
 
-if ($username == '' || $password == ''){
+if ($username == ''){
    //echo json_encode(array("Ahora si" => $_SERVER['PHP_SELF'])) ;
    $query = "SELECT nombre, apellidos, username FROM usuarios ";
         $result = $conn->query($query);

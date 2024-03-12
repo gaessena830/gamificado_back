@@ -9,13 +9,12 @@ if (!isset($data->nombre) || !isset($data->apellidos) || !isset($data->password)
 }
     $nombre=$data->nombre;
     $apellidos=$data->apellidos;
-    $identificacion=$data->password;
+    $identificacion=$data->identificacion;
     $correo=$data->correo;
     $telefono=$data->telefono;
     $rol=$data->rol;
     $username=$data->username;
     $password=$data->password;
-    
     $query="SELECT * FROM usuarios WHERE username='$username'";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
