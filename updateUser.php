@@ -10,6 +10,7 @@ $data = json_decode(file_get_contents("php://input"));
     $telefono=$data->telefono ?? null;
     $username=$data->username;
     
+    
     //consulta si usuario existe
     $query="SELECT * FROM usuarios WHERE username='$username'";
     $result = $conn->query($query);
